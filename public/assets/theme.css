@@ -1,0 +1,57 @@
+:root {
+  --sa-bg: #FFFFFF;
+  --sa-tint: #F3F8FC;
+  --sa-blue-100: #E8F3FA;
+  --sa-blue-200: #BFDDF0;
+  --sa-blue-500: #5BA8D6;
+  --sa-blue-600: #2B77A8;
+  --sa-blue-700: #1D5A83;
+  --sa-lime-100: #F4F8DC;
+  --sa-lime-400: #BFD84A;
+  --sa-green-700: #3F6B1F;
+  --sa-yellow-100: #FBF3C9;
+  --sa-yellow-300: #F4D35E;
+  --sa-ink: #1E2A33;
+  --sa-muted: #5A6B78;
+  --sa-line: #DCE6EE;
+  --sa-danger: #B8472F;
+  --sa-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sa-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Override Bootstrap 5 */
+  --bs-body-font-family: var(--sa-font);
+  --bs-body-color: var(--sa-ink);
+  --bs-body-bg: var(--sa-bg);
+  --bs-primary: #2B77A8;
+  --bs-primary-rgb: 43, 119, 168;
+  --bs-link-color: var(--sa-blue-600);
+  --bs-link-hover-color: var(--sa-blue-700);
+  --bs-border-color: var(--sa-line);
+  --bs-border-radius: 6px;
+  --bs-border-radius-lg: 8px;
+}
+
+body { font-size: 16px; line-height: 1.6; }
+
+.btn { min-height: 44px; padding: 0 20px; border-radius: 6px; font-weight: 500; box-shadow: none; }
+.btn-primary { --bs-btn-bg: #2B77A8; --bs-btn-border-color: #2B77A8;
+  --bs-btn-hover-bg: #1D5A83; --bs-btn-hover-border-color: #1D5A83;
+  --bs-btn-active-bg: #1D5A83; --bs-btn-active-border-color: #1D5A83; }
+.btn-outline-primary { --bs-btn-color: #2B77A8; --bs-btn-border-color: #2B77A8;
+  --bs-btn-hover-bg: #E8F3FA; --bs-btn-hover-color: #1D5A83; --bs-btn-hover-border-color: #2B77A8; }
+
+.form-control, .form-select { min-height: 44px; border-color: var(--sa-line); border-radius: 6px; box-shadow: none; }
+.form-control:focus, .form-select:focus { border-color: var(--sa-blue-600); box-shadow: 0 0 0 2px var(--sa-blue-200); }
+.form-label { font-size: 14px; font-weight: 500; }
+
+.card { border: 1px solid var(--sa-line); border-radius: 8px; box-shadow: none; }
+.table > :not(caption) > * > * { padding: 12px 14px; }
+.table thead th { background: var(--sa-tint); color: var(--sa-muted); font-size: 14px; font-weight: 600; }
+.table-hover > tbody > tr:hover > * { background: var(--sa-blue-100); }
+
+.ticket-box { background: var(--sa-lime-100); border: 1px dashed var(--sa-lime-400); border-radius: 8px;
+  padding: 24px; text-align: center; font-family: var(--sa-mono); font-size: 24px; letter-spacing: .08em; }
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--sa-blue-600); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+

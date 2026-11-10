@@ -1,0 +1,20 @@
+Options -Indexes
+
+# Batas upload (3 gambar x 5 MB) bila PHP berjalan sebagai modul Apache; untuk FPM/CGI lihat .user.ini
+<IfModule mod_php.c>
+    php_value upload_max_filesize 6M
+    php_value post_max_size 20M
+</IfModule>
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 6M
+    php_value post_max_size 20M
+</IfModule>
+
+# Semua permintaan yang bukan file/folder nyata diarahkan ke router.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
